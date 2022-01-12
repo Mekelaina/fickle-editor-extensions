@@ -28,11 +28,11 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.other.intrinsic.fickle",
-				"match": "\\b(fic|kle|mov|prt|inp|add|sub|mul|div|mod|lsl|lsr|asl|asr|lcl|lcr|acl|acr|and|or|xor|not|neg|psh|pop|dup|swp|drp|cyl|pek|flp|siz|clr)\\b"
+				"match": "\\b(mov|prt|inp|add|sub|mul|div|mod|lsl|lsr|asl|asr|lcl|lcr|acl|acr|and|or|xor|not|neg|psh|pop|dup|swp|drp|cyl|pek|flp|siz|clr)\\b"
 			},
 			{
 				"name": "keyword.control.compiler.fickle",
-				"match": "\\b(def|inc|ret|if|jmp|cmp)\\b"
+				"match": "\\b(fic|kle|def|inc|ret|if|jmp|cmp)\\b"
 			}]
 		},
 		"strings": {
