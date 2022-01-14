@@ -12,6 +12,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#subroutine"
+		},
+		{
 			"include": "#registers"
 		},
 		{
@@ -28,7 +31,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.other.intrinsic.fickle",
-				"match": "\\b(mov|prt|inp|add|sub|mul|div|mod|lsl|lsr|asl|asr|lcl|lcr|acl|acr|and|or|xor|not|neg|psh|pop|dup|swp|drp|cyl|pek|flp|siz|clr)\\b"
+				"match": "\\b(mov|prt|inp|add|sub|mul|div|mod|lsl|lsr|asl|asr|lcl|lcr|acl|acr|and|or|xor|not|neg|psh|pop|dup|swp|drp|cyl|pek|flp|siz|clr|bnd|eql)\\b"
 			},
 			{
 				"name": "keyword.control.compiler.fickle",
@@ -59,7 +62,7 @@
 		},
 		"comments": {
 			"name": "comment.line.fickle",
-			"match": "\b(^;\\s.+[\\w$])|(^;.+[\\w$])|(^;\\s)|(^;)\b"
+			"match": "(;|(^|\\s)#\\s).*$"
 		},
 		"labels": {
 			"patterns": [
@@ -69,7 +72,7 @@
 							"name": "punctuation.definition.label.fickle"
 						}
 					},
-					"match": "^\\s+?@\\w+",
+					"match": "\\s?+@\\w+",
 					"name": "meta.preprocessor.label.fickle"
 				}
 			]
@@ -93,7 +96,29 @@
 		},
 		"registers": {
 			"name": "variable.other.fickle",
-			"match": "([swbfa][01])|^([xycio])$"
+			"match": "([swbfa][01])|\\b([xycio])\\b"
+		},
+		"subroutine": {
+			"patterns": [
+				{
+					"include": "#subroutine-name"
+				},
+				{
+					"include": "#subroutine-perameters"
+				}
+			]
+		},
+		"subroutine-name": {
+			"name": "entity.name.function.fickle",
+			"match": "^def\\s[a-z_1-9]*|^end\\s[a-z_1-9]*"
+		},
+		"subroutine-perameters": {
+			"patterns": [
+				{
+					"match": ",",
+					"name": "keyword.operator.comma.fickle"
+				}
+			]
 		}
 	},
 	"scopeName": "source.fickle"
