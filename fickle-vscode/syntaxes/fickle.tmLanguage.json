@@ -32,7 +32,7 @@
 			},
 			{
 				"name": "keyword.control.compiler.fickle",
-				"match": "\\b(fic|kle|def|inc|ret|if|jmp|cmp)\\b"
+				"match": "\\b(fic|kle|def|end|inc|ret|if|jmp|cmp)\\b"
 			}]
 		},
 		"strings": {
