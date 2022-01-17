@@ -86,7 +86,7 @@
 				},
 				{
 					"name":"constant.numeric.hexidecimal.fickle",
-					"match": "\\$+(\\d+\\.?\\d?+)"
+					"match": "\\$+([0-9A-F]+\\.?[0-9A-F]?+)"
 				},
 				{
 					"name": "constant.numeric.binary.fickle",
